@@ -26,6 +26,12 @@ function agregarCurso(e) {
         const cursoSeleccionado = e.target.parentElement.parentElement;
         leerDatosCurso(cursoSeleccionado);
     }
+    Swal.fire({
+        icon: 'success',
+        title: 'El curso fue agregado al carrito',
+        showConfirmButton: false,
+        timer: 1000
+      }) 
 }
 
 function eliminarCurso(e) {
@@ -93,4 +99,11 @@ function vaciarCarrito() {
     while(contenedorCarrito.firstChild) {
          contenedorCarrito.removeChild(contenedorCarrito.firstChild);
      }
+     Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'El carrito ha sido borrado con exito',
+        showConfirmButton: false,
+        timer: 1500
+      }) 
 }
