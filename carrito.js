@@ -21,18 +21,22 @@ function cargarEventListeners() {
 }
 
 function agregarCurso(e) {
+    
     e.preventDefault();
     if( e.target.classList.contains('agregar-carrito') ) {
         const cursoSeleccionado = e.target.parentElement.parentElement;
         leerDatosCurso(cursoSeleccionado);
+     
+        Swal.fire({
+            icon: 'success',
+            title: 'El curso fue agregado al carrito',
+            showConfirmButton: false,
+            timer: 1000
+        }) 
     }
-    Swal.fire({
-        icon: 'success',
-        title: 'El curso fue agregado al carrito',
-        showConfirmButton: false,
-        timer: 1000
-      }) 
+    
 }
+
 
 function eliminarCurso(e) {
     if(e.target.classList.contains('borrar-curso')) {
@@ -80,9 +84,11 @@ function carritoHTML() {
             <td> <a href="#" class="borrar-curso" data-id="${curso.id}" > X </a></td>
         `;
         contenedorCarrito.appendChild(row);
+        
     }) 
-
+    
     sincronizarStorage();
+    
 }
 
 function sincronizarStorage() {
@@ -97,7 +103,8 @@ function limpiarHTML() {
 
 function vaciarCarrito() {
     while(contenedorCarrito.firstChild) {
-         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+         contenedorCarrito.removeChild(contenedorCarrito.firstChild); 
+         vaciarLocalStorage();
      }
      Swal.fire({
         position: 'top-end',
@@ -105,5 +112,40 @@ function vaciarCarrito() {
         title: 'El carrito ha sido borrado con exito',
         showConfirmButton: false,
         timer: 1500
-      }) 
+    }) 
+    
 }
+
+function vaciarLocalStorage() {
+    localStorage.clear();
+}
+
+
+const lista = document.querySelector('#listado')
+
+
+const pedirPost = async () => {
+
+    const resp = await fetch('/data.json')
+    const data = await resp.json()
+
+    html = ''
+    data.forEach( product => {
+        html += `
+            <div class="card">
+                <img src="${product.img}" class="imagen-curso">
+                <div class="info-card">
+                    <h4>${product.titulo}</h4>
+                    <p>${product.profe}</p>
+                    <p class="precio">${product.precio}  <span class="precioFinal">${product.precioFinal}</span></p>
+                    <a href="#" class="btn agregar-carrito" data-id="${product.id}">Agregar Al Carrito</a>
+                </div>
+            </div>`
+    })
+
+    lista.innerHTML = html
+}
+
+
+
+pedirPost()

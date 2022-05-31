@@ -65,8 +65,17 @@ h4 {
     margin:10px 0;
 }
 .container {
-    width: 70%;
+    width: 100vh;
     margin: auto;;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li {
+    list-style: none;
 }
 
 .card {
@@ -74,7 +83,7 @@ h4 {
     border: 1px solid #e1e1e1;
     background: white;
     text-align: left;
-    height: 400px;
+    height: 100%;
     width: 300px;
 }
 .imagen-curso {
@@ -131,12 +140,7 @@ h4 {
  color:white;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+
 
 .btn {
     text-decoration: none;

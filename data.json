@@ -1,0 +1,14 @@
+[
+{"id":"1","img":"img/curso1.jpg", "titulo":"Bases de Vinyasa Yoga", "profe":"Yoga Florece","precio":"$15.99", "precioFinal":"$89.99"},
+{"id":"2","img":"img/curso2.jpg", "titulo":"Yoga y Chakras", "profe":"Yoga Florece","precio":"$21.99", "precioFinal":"$70.99"},
+{"id":"3","img":"img/curso3.jpg", "titulo":"Yoga Lyengar", "profe":"Yoga Florece","precio":"$15.99", "precioFinal":"$60.99"},
+{"id":"4","img":"img/curso4.jpg", "titulo":"Yoga Anti Estrés", "profe":"Yoga Florece","precio":"$15.99", "precioFinal":"$100.99"},
+{"id":"5","img":"img/curso5.jpg", "titulo":"Yoga para Principiantes", "profe":"Yoga Florece","precio":"$18.99", "precioFinal":"$81.99"},
+{"id":"6","img":"img/curso6.jpg", "titulo":"Yoga para tu Centro", "profe":"Yoga Florece","precio":"$19.99", "precioFinal":"$85.99"},
+{"id":"7","img":"img/curso7.jpg", "titulo":"Introducción a Bowspring", "profe":"Yoga Florece","precio":"$14.99", "precioFinal":"$95.99"},
+{"id":"8","img":"img/curso8.jpg", "titulo":"Yoga y Bio-decodificación", "profe":"Yoga Florece","precio":"$13.99", "precioFinal":"$70.99"},
+{"id":"9","img":"img/curso9.jpg", "titulo":"Yoga Lyengarr", "profe":"Yoga Florece","precio":"$12.99", "precioFinal":"$90.99"},
+{"id":"10","img":"img/curso1.jpg", "titulo":"Yoga para Principiantes", "profe":"Yoga Florece","precio":"$20.99", "precioFinal":"$99.99"},
+{"id":"11","img":"img/curso1.jpg", "titulo":"Bases de Vinyasa Yoga", "profe":"Yoga Florece","precio":"$24.99", "precioFinal":"$109.99"},
+{"id":"12","img":"img/curso2.jpg", "titulo":"Yoga y Chakras", "profe":"Yoga Florece","precio":"$14.99", "precioFinal":"$89.99"}
+]
