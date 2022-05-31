@@ -126,7 +126,7 @@ const lista = document.querySelector('#listado')
 
 const pedirPost = async () => {
 
-    const resp = await fetch('/data.json')
+    const resp = await fetch('data.json')
     const data = await resp.json()
 
     html = ''
